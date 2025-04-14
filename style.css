@@ -1,0 +1,327 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "RobotoFlex" , sans-serif;
+}
+
+p {
+    line-height: 1.3;
+}
+
+
+     /* ===================
+                NAV
+        =================== */
+
+nav,
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25em 1em;
+    font-weight: bold;
+}
+
+nav div {
+    gap: 2em;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+        /* ===================
+                HERO
+        =================== */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.hero-container {
+    height: 23rem;
+    background-image: url("./images/bg.png");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 0 0 10px black;
+    align-content: end;
+    padding: 0 1.3rem 1rem;
+}
+
+.hero-container p {
+    margin-bottom: 0.25rem;
+}
+
+.hero-container h1 {
+    margin: 0.25rem 0;
+}
+
+.hero-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.about-me-container {
+    padding: 0 1.5rem;
+}
+
+.about-container h1 {
+    width: 80%;
+}
+
+.about-me img {
+    width: 40%;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+
+
+
+
+        /* ===================
+                SECTION
+        =================== */
+        
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    ;
+}
+
+.blog-one,
+.blog-two,
+.blog-three,
+.blog-four,
+.blog-five,
+.blog-six {
+    padding: 0 1.5rem 3rem;
+}
+
+.blog-one {
+    grid-area: one;
+}
+.blog-two {
+    grid-area: two;
+}
+.blog-three{
+    grid-area: three;
+}
+.blog-four{
+    grid-area: four;
+}
+.blog-five {
+    grid-area: five;
+}
+.blog-six {
+    grid-area: six;
+}
+
+
+
+
+.blog-container img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recent-posts {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 5rem;
+}
+        
+        
+        /* ===================
+                FOOTER
+        =================== */
+        
+footer {
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    padding: 0.25rem 0;
+}
+
+footer h2 {
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 3rem;
+}
+
+
+.view-more  {
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+
+
+             /* ===================
+                    First Post 
+              =================== */
+              
+.hero-post {
+    padding: 1.5rem;
+}
+              
+.hero-post img {
+    width: 100%;
+}
+
+
+              /* ===================
+                   Media queries
+              =================== */
+@media (max-width: 799px) {
+    #more-blogs {
+        display: none;
+    }
+}         
+         
+              
+@media (min-width: 800px) {
+    
+                /* ===================
+                          HERO
+                =================== */
+.hero-container {
+    height: 34rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    padding: 0 3.3rem 3rem;
+}
+
+.hero-container p {
+    width: 60%;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+                 /* ===================
+                        About Me
+                =================== */
+                
+nav {
+    background-color: white;
+}
+                
+.about {
+    background-color: #FAFAFA;
+}
+                
+.me {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "imgs wlcm wlcm wlcm"
+    "imgs phrg phrg phrg";
+    margin-bottom: 4rem;
+    padding: 3rem 3rem;
+    align-items: center;
+}
+
+.me h1 {
+    grid-area: wlcm;
+    margin-bottom: 0;
+ 
+}
+
+.me h2 {
+    grid-area: phrg;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.me img {
+    grid-area: imgs;
+    width: 60%;
+}
+
+.about-me p {
+    margin: 1rem 8rem;
+}
+        
+
+                /* ===================
+                        SECTION
+                =================== */
+               
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "one two three"
+    "four five six";
+} 
+
+                /* ===================
+                        FOOTER
+                =================== */
+
+.view-more  {
+    display: none;
+}
+
+
+                /* ===================
+                        First Post 
+                =================== */
+
+.firstNav {
+    background-color: white;
+}
+
+.firstPost {
+    background-color: #FAFAFA;
+}
+
+.hero-post {
+    padding: 2.5rem;
+}
+
+.hero-post p,
+.hero-post h1 {
+    padding: 0 3rem;
+}
+              
+.hero-post img {
+    padding-top: 1rem;
+    width: 100%;
+}
+
+
+
+
+}
